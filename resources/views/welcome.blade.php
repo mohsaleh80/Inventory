@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UI</title>
+    <title>Inventory MS</title>
+    <link rel="shortcut icon" href="{{asset('backend/assets/images/logo-sm.png')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ad84e81c25.js" crossorigin="anonymous"></script>
    <!-- <link rel="stylesheet" href="style.css">-->
@@ -29,7 +30,7 @@ body {
     font-family:'Roboto Condensed';
     font-size: 16px;
     margin: 15px;
-    color: black ;
+    color: white ;
 }
 
 .nav-link:hover{
@@ -48,9 +49,10 @@ body {
     color:whitesmoke;
 }
 .site-content{
-    background-image: url("./images/main_bkg.jpeg");
+    background-image: url({{ asset('frontend/assets/images/inventory_1.jpg') }});
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% 100%;
+    
 }
 
 .site-desc , .site-title {
@@ -58,7 +60,7 @@ body {
 }
 
 .site-title{
-     margin-top: 30%;
+     margin-top: 10%;
 }
 
 .main-btn{
@@ -87,7 +89,7 @@ body {
 
 .card {
     margin-bottom: 8%;
-    height: 400px;
+    height: 450px;
 }
 
 
@@ -99,11 +101,12 @@ body {
   </head>
   <body>
      <header>
-        <nav class="navbar navbar-expand-lg bg-light" >
+        <nav class="navbar navbar-expand-lg bg-dark" >
             <div class="container-fluid ">
-              <a class="navbar-brand " href="#">
-                Inventory<span style="color:#00E8E8">IMS</span>
-              </a>
+              <h5 class="logo-lg">
+                        <img src="{{asset('backend/assets/images/logo-sm.png')}}" alt="logo-light" height="20">
+                        <strong class="text-white">Inventory MS</strong>
+             </h5>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -133,9 +136,9 @@ body {
                     </ul>
 
                     <form class="form-inline my-0 me-lg-0 ">
-                        <button class="btn menu-right-btn border btn-secondary" type="submit" href="#" >  
-                            Template                 
-                        </button>
+                        <a class="btn menu-right-btn border btn-secondary" type="submit" href="{{ route('login') }}" >  
+                            Login                 
+                       </a>
                     </form>
               </div>
               
@@ -146,21 +149,22 @@ body {
      </header>
 
      <main>
-       <div class="container-fluid p-0">
+       <div class="container p-0">
          <div class="site-content">
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column align-items-center">
-                  <h1 class="site-title text-white" >
-                    Bootstrap User Interface
-                  </h1>
-                  <p class="site-desc text-white" >Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <div class="d-flex flex-row main-btn">
-                    <input type="button" value="View Template" class="btn  site-btn-1 px-4 py-3 me-4 btn-primary">
-                    <input type="button" value="New Features" class="btn  site-btn-2 px-4 py-3 me-4 btn-info text-white">
-                    
-                  </div> 
+                   <h1 class="site-title text-dark " >
+                   <br> <br> 
+                    </h1> 
+                   <p class="site-desc text-white" > <br><br></p>
+                   
+                   <div class="d-flex flex-row main-btn" >
+                      <input type="button" value="View Template" class="btn  site-btn-1 px-4 py-3 me-4 btn-dark text-white">
+                      <input type="button" value="New Features" class="btn  site-btn-2 px-4 py-3 me-4 btn-dark text-white">
+                    </div> 
+                   
                 </div>
-                           
+                        
             </div>
          </div>
 
@@ -182,9 +186,9 @@ body {
 
               <div class="col-sm-6 col-lg-3">
                 <div class="card " >
-                  <img src="images/responsive.png" alt="responsive image" >
+                  <img src="{{ asset('frontend/assets/images/suppliers.webp') }}" alt="responsive image" >
                   <div class="card-body">
-                    <h4 class="card-title">Responsive</h4>
+                    <h4 class="card-title">Suppliers</h4>
                     <p class="card-text"> (RWD) is a web development approach that creates dynamic changes to the appearance of a website,
                        depending on the screen size and orientation of the device being used to view it</p>
                   </div>
@@ -193,9 +197,9 @@ body {
 
               <div class=" col-sm-6 col-lg-3">
                 <div class="card " >
-                  <img src="./images/agile.jpg" alt="Agile image" >
+                  <img src="{{ asset('frontend/assets/images/categories.webp') }}" alt="Agile image" >
                   <div class="card-body">
-                    <h4 class="card-title">Agile</h4>
+                    <h4 class="card-title">Categories</h4>
                     <p class="card-text"> Agile working is about bringing people, processes, connectivity and technology, 
                       time and place together to find the most appropriate and effective way of working to carry out a particular task.</p>
                   </div>
@@ -204,9 +208,9 @@ body {
 
               <div class=" col-sm-6 col-lg-3">
                 <div class="card "  >
-                  <img src="./images/responsive.png" alt="UI/UX image" >
+                  <img src="{{ asset('frontend/assets/images/product.webp') }}" alt="UI/UX image" >
                   <div class="card-body">
-                    <h4 class="card-title">UI/UX</h4>
+                    <h4 class="card-title">Products</h4>
                     <p class="card-text"> 
                       Both are important facets of the custom software development process, and both involve working closely
                        with users to create interfaces that are both effective and easy to use.</p>
@@ -216,9 +220,9 @@ body {
 
               <div class=" col-sm-6 col-lg-3">
                 <div class="card  " >
-                  <img src="./images/DM.png" alt="Digital MArketing image" >
+                  <img src="{{ asset('frontend/assets/images/customer.webp') }}" alt="Digital MArketing image" >
                   <div class="card-body">
-                    <h4 class="card-title">Digital Marketing</h4>
+                    <h4 class="card-title">Customers</h4>
                     <p class="card-text"> the promotion of brands to connect with potential customers using the internet and other forms of digital communication. This includes not only email, social media,
                        and web-based advertising</p>
                   </div>
