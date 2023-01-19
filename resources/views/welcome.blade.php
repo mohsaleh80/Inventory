@@ -30,7 +30,7 @@ body {
     font-family:'Roboto Condensed';
     font-size: 16px;
     margin: 15px;
-    color: white ;
+    color: white !important;;
 }
 
 .nav-link:hover{
@@ -52,6 +52,8 @@ body {
     background-image: url({{ asset('frontend/assets/images/inventory_1.jpg') }});
     background-attachment: fixed;
     background-size: 100% 100%;
+    height:450px;
+    
     
 }
 
@@ -89,7 +91,7 @@ body {
 
 .card {
     margin-bottom: 8%;
-    height: 450px;
+    height: auto;
 }
 
 
@@ -153,7 +155,7 @@ body {
          <div class="site-content">
             <div class="d-flex justify-content-center">
                 <div class="d-flex flex-column align-items-center">
-                   <h1 class="site-title text-dark " >
+                 <!--  <h1 class="site-title text-dark " >
                    <br> <br> 
                     </h1> 
                    <p class="site-desc text-white" > <br><br></p>
@@ -162,7 +164,7 @@ body {
                       <input type="button" value="View Template" class="btn  site-btn-1 px-4 py-3 me-4 btn-dark text-white">
                       <input type="button" value="New Features" class="btn  site-btn-2 px-4 py-3 me-4 btn-dark text-white">
                     </div> 
-                   
+                  -->
                 </div>
                         
             </div>
@@ -176,9 +178,10 @@ body {
            <div class="container text-center">
                 <h1 class="feature-head-1">Fantastic Features</h1>
                 <h1 class="feature-head-2">& Different type of template</h1>
-                <p class="feature-p-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto saepe rerum consequatur. 
-                  Iste animi architecto, nihil eveniet atque quam odio praesentium dolore consectetur! Nulla nam, 
-                  provident blanditiis ad nobis facere!
+                <p class="feature-p-1">An inventory management system is the combination of technology (hardware and software) and
+                   processes and procedures that oversee the monitoring and maintenance of stocked products,
+                    whether those products are company assets, raw materials and supplies, 
+                    or finished products ready to be sent to vendors or end consumers
                 </p>
            </div>
 
@@ -189,8 +192,8 @@ body {
                   <img src="{{ asset('frontend/assets/images/suppliers.webp') }}" alt="responsive image" >
                   <div class="card-body">
                     <h4 class="card-title">Suppliers</h4>
-                    <p class="card-text"> (RWD) is a web development approach that creates dynamic changes to the appearance of a website,
-                       depending on the screen size and orientation of the device being used to view it</p>
+                    <p class="card-text"> A business or person that make goods available to another business or service.
+                       Suppliers are known as the first link in the supply chain, forming only B2B relationships and providing goods to manufacturers</p>
                   </div>
                 </div>
               </div>
@@ -200,31 +203,35 @@ body {
                   <img src="{{ asset('frontend/assets/images/categories.webp') }}" alt="Agile image" >
                   <div class="card-body">
                     <h4 class="card-title">Categories</h4>
-                    <p class="card-text"> Agile working is about bringing people, processes, connectivity and technology, 
-                      time and place together to find the most appropriate and effective way of working to carry out a particular task.</p>
+                    <p class="card-text">Category management is a retailing and purchasing concept in which the range of 
+                      products purchased by a business organization or sold by a retailer is broken down into discrete
+                       groups of similar or related products</p>
                   </div>
                 </div>  
               </div>
 
               <div class=" col-sm-6 col-lg-3">
                 <div class="card "  >
-                  <img src="{{ asset('frontend/assets/images/product.webp') }}" alt="UI/UX image" >
+                  <img src="{{ asset('frontend/assets/images/product.webp') }}" height="205px"; alt="UI/UX image" >
                   <div class="card-body">
                     <h4 class="card-title">Products</h4>
                     <p class="card-text"> 
-                      Both are important facets of the custom software development process, and both involve working closely
-                       with users to create interfaces that are both effective and easy to use.</p>
+                    A product can be a service or an item.
+                     It can be physical or in virtual or cyber form. Every product is made at a cost 
+                     and each is sold at a price. The price that can be charged depends on the market,
+                      the quality</p>
                   </div>
                 </div>
               </div>
 
               <div class=" col-sm-6 col-lg-3">
                 <div class="card  " >
-                  <img src="{{ asset('frontend/assets/images/customer.webp') }}" alt="Digital MArketing image" >
+                  <img src="{{ asset('frontend/assets/images/customer.webp') }}" height="205px";  alt="Digital MArketing image" >
                   <div class="card-body">
                     <h4 class="card-title">Customers</h4>
-                    <p class="card-text"> the promotion of brands to connect with potential customers using the internet and other forms of digital communication. This includes not only email, social media,
-                       and web-based advertising</p>
+                    <p class="card-text">  A customer is an individual or business that purchases another company's goods or services.
+                       Customers are important because they drive revenues; without them,
+                        businesses cannot continue to exist</p>
                   </div>
                 </div>  
               </div>
