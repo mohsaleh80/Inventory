@@ -66,7 +66,7 @@
 
                 <td> 
                     @if($item->status == '0')
-                    <a href=" {{route('invoice.show',$item->id)}}" class="btn btn-success sm" title="Approved" id="ApproveBtn">  <i class="fas fa-check-circle"></i> </a>
+                    <a href=" {{route('purchase.approve',$item->id)}}" class="btn btn-success sm" title="Approved" id="ApproveBtn">  <i class="fas fa-check-circle"></i> </a>
                      
                     @endif
                 </td>
